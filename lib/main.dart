@@ -7,6 +7,8 @@ import 'package:flutter_application_1/screen/ecomm_practice_sentdata/ecomm_detai
 import 'package:flutter_application_1/screen/ecomm_practice_sentdata/ecomm_first_screen/ecomm_firstScreen.dart';
 import 'package:flutter_application_1/screen/ecomm_practice_sentdata/ecomm_homescreen/ecomm_homescreen.dart';
 import 'package:flutter_application_1/screen/ecomm_practice_sentdata/ecomm_homescreen/ecomm_homescreen_binding.dart';
+import 'package:flutter_application_1/screen/test_3_file_inOnescreen/counter_app_binding.dart';
+import 'package:flutter_application_1/screen/test_3_file_inOnescreen/couter_app_view.dart';
 import 'package:get/get.dart';
 
 void main() {
@@ -27,7 +29,7 @@ class MainApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       // home: ScreenDi1(),
-      initialRoute: "/ecommfirstScreen",
+      initialRoute: "/ecomdetail",
       getPages: [
         GetPage(name: "/screen1", page: () => ScreenDi1()),
         GetPage(
@@ -52,6 +54,11 @@ class MainApp extends StatelessWidget {
           name: "/ecommfirstScreen",
           page: () => EcommFirstscreen(),
           binding: EcommDetailBinding(),
+        ),
+        GetPage(
+          name: "/counterApp",
+          page: () => CouterAppView(),
+          binding: CounterAppBinding(),
         ),
       ],
     );
